@@ -1,5 +1,6 @@
 # Serilog.Sinks.File.GZip
 [![NuGet](https://img.shields.io/nuget/v/Serilog.Sinks.File.GZip.svg)](https://www.nuget.org/packages/Serilog.Sinks.File.GZip)
+[![Build Status](https://ci.appveyor.com/api/projects/status/t89irfvuekg76bdx?svg=true)](https://ci.appveyor.com/project/cocowalla/serilog-file-sink-gzip)
 
 A `FileLifecycleHooks`-based plugin for the [Serilog File Sink](https://github.com/serilog/serilog-sinks-file) that compresses log files using streaming GZip compression.
 

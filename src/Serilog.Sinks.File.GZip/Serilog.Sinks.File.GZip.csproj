@@ -1,0 +1,43 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <Description>Plugin for the Serilog File sink that compresses output using streaming GZIP.</Description>
+        <VersionPrefix>1.0.0-dev</VersionPrefix>
+        <GenerateAssemblyVersionAttribute>false</GenerateAssemblyVersionAttribute>
+        <Authors>Colin Anderson</Authors>
+        <Copyright>Copyright © Colin Anderson 2019</Copyright>
+        <TargetFrameworks>net45;netstandard1.6;netstandard2.0</TargetFrameworks>
+        <AssemblyName>Serilog.Sinks.File.GZip</AssemblyName>
+        <RootNamespace>Serilog.Sinks.File.GZip</RootNamespace>
+        <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+        <RepositoryUrl>http://github.com/cocowalla/serilog-file-sink-gzip</RepositoryUrl>
+        <RepositoryType>git</RepositoryType>
+        <GenerateDocumentationFile>false</GenerateDocumentationFile>
+
+        <!-- Don't reference the full NETStandard.Library -->
+        <DisableImplicitFrameworkReferences>true</DisableImplicitFrameworkReferences>
+    </PropertyGroup>
+
+    <PropertyGroup>
+        <IsPackable>true</IsPackable>
+        <PackageTags>serilog;file;compression;gzip</PackageTags>
+        <PackageProjectUrl>http://github.com/cocowalla/serilog-file-sink-gzip</PackageProjectUrl>
+        <PackageId>Serilog.Sinks.File.GZip</PackageId>
+        <PackageLicenseUrl>http://www.apache.org/licenses/LICENSE-2.0</PackageLicenseUrl>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Serilog.Sinks.File" Version="4.1.0-dev-*" />
+    </ItemGroup>
+
+    <ItemGroup Condition=" '$(TargetFramework)' == 'net45' ">
+        <Reference Include="System" />
+        <Reference Include="System.Core" />
+        <Reference Include="Microsoft.CSharp" />
+    </ItemGroup>
+
+    <ItemGroup Condition=" '$(TargetFramework)' != 'net45' ">
+        <PackageReference Include="System.IO.Compression" Version="4.3.0" />
+    </ItemGroup>
+
+</Project>

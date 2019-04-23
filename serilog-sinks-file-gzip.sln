@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Serilog.Sinks.File.GZip", "src\Serilog.Sinks.File.Gzip\Serilog.Sinks.File.GZip.csproj", "{344B17C5-105F-4124-9CA7-9A42C24151E2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Serilog.Sinks.File.GZip.Test", "test\Serilog.Sinks.File.GZip.Test\Serilog.Sinks.File.GZip.Test.csproj", "{4FA447FB-7087-4279-BEF3-AF69C4D26E1D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{344B17C5-105F-4124-9CA7-9A42C24151E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{344B17C5-105F-4124-9CA7-9A42C24151E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{344B17C5-105F-4124-9CA7-9A42C24151E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{344B17C5-105F-4124-9CA7-9A42C24151E2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4FA447FB-7087-4279-BEF3-AF69C4D26E1D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4FA447FB-7087-4279-BEF3-AF69C4D26E1D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4FA447FB-7087-4279-BEF3-AF69C4D26E1D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4FA447FB-7087-4279-BEF3-AF69C4D26E1D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

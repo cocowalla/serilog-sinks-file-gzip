@@ -10,7 +10,7 @@
         <AssemblyName>Serilog.Sinks.File.GZip</AssemblyName>
         <RootNamespace>Serilog.Sinks.File.GZip</RootNamespace>
         <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
-        <RepositoryUrl>https://github.com/cocowalla/serilog-file-sink-gzip</RepositoryUrl>
+        <RepositoryUrl>https://github.com/cocowalla/serilog-sinks-file-gzip</RepositoryUrl>
         <RepositoryType>git</RepositoryType>
         <GenerateDocumentationFile>false</GenerateDocumentationFile>
 
@@ -21,7 +21,7 @@
     <PropertyGroup>
         <IsPackable>true</IsPackable>
         <PackageTags>serilog;file;compression;gzip</PackageTags>
-        <PackageProjectUrl>https://github.com/cocowalla/serilog-file-sink-gzip</PackageProjectUrl>
+        <PackageProjectUrl>https://github.com/cocowalla/serilog-sinks-file-gzip</PackageProjectUrl>
         <PackageId>Serilog.Sinks.File.GZip</PackageId>
         <PackageLicenseUrl>https://www.apache.org/licenses/LICENSE-2.0</PackageLicenseUrl>
     </PropertyGroup>

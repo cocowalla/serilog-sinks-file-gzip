@@ -11,7 +11,7 @@ A `FileLifecycleHooks`-based plugin for the [Serilog File Sink](https://github.c
 To get started, install the latest [Serilog.Sinks.File.GZip](https://www.nuget.org/packages/Serilog.Sinks.File.GZip) package from NuGet:
 
 ```powershell
-Install-Package Serilog.Sinks.File.GZip -Version 1.0.0
+Install-Package Serilog.Sinks.File.GZip -Version 1.0.1
 ```
 
 To enable GZip compression, use one of the new `LoggerSinkConfiguration` extensions that has a `FileLifecycleHooks` argument, and create a new `GZipHooks`:

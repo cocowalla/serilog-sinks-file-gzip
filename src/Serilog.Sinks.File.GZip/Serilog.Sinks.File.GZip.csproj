@@ -2,11 +2,11 @@
 
     <PropertyGroup>
         <Description>Plugin for the Serilog File sink that compresses output using streaming GZIP.</Description>
-        <VersionPrefix>1.0.0-dev</VersionPrefix>
+        <VersionPrefix>1.0.0</VersionPrefix>
         <GenerateAssemblyVersionAttribute>false</GenerateAssemblyVersionAttribute>
         <Authors>Colin Anderson</Authors>
         <Copyright>Copyright © Colin Anderson 2019</Copyright>
-        <TargetFrameworks>net45;netstandard1.6;netstandard2.0</TargetFrameworks>
+        <TargetFrameworks>net45;netstandard1.6;netstandard2.0;netstandard2.1</TargetFrameworks>
         <AssemblyName>Serilog.Sinks.File.GZip</AssemblyName>
         <RootNamespace>Serilog.Sinks.File.GZip</RootNamespace>
         <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
@@ -23,11 +23,11 @@
         <PackageTags>serilog;file;compression;gzip</PackageTags>
         <PackageProjectUrl>https://github.com/cocowalla/serilog-sinks-file-gzip</PackageProjectUrl>
         <PackageId>Serilog.Sinks.File.GZip</PackageId>
-        <PackageLicenseUrl>https://www.apache.org/licenses/LICENSE-2.0</PackageLicenseUrl>
+        <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="Serilog.Sinks.File" Version="4.1.0-dev-*" />
+        <PackageReference Include="Serilog.Sinks.File" Version="4.1.0" />
     </ItemGroup>
 
     <ItemGroup Condition=" '$(TargetFramework)' == 'net45' ">

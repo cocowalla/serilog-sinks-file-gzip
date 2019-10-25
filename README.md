@@ -8,12 +8,10 @@ A `FileLifecycleHooks`-based plugin for the [Serilog File Sink](https://github.c
 
 `FileLifecycleHooks` is a new Serilog File Sink mechanism that allows hooking into log file lifecycle events, and allows scenarios such as wrapping the Serilog output stream in another stream.
 
-This new mechanism is so far only available in the the `dev` Serilog packages, so note that if you already have a production version of the `Serilog.Sinks.File` package installed, you will need to switch it out for the latest `dev` version.
-
-To get started, install the latest [Serilog.Sinks.File.GZip](https://www.nuget.org/packages/Serilog.Sinks.File.GZip) `dev` package from NuGet:
+To get started, install the latest [Serilog.Sinks.File.GZip](https://www.nuget.org/packages/Serilog.Sinks.File.GZip) package from NuGet:
 
 ```powershell
-Install-Package Serilog.Sinks.File.GZip -Version 1.0.0-dev
+Install-Package Serilog.Sinks.File.GZip -Version 1.0.0
 ```
 
 To enable GZip compression, use one of the new `LoggerSinkConfiguration` extensions that has a `FileLifecycleHooks` argument, and create a new `GZipHooks`:

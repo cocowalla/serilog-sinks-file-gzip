@@ -5,9 +5,6 @@
 A `FileLifecycleHooks`-based plugin for the [Serilog File Sink](https://github.com/serilog/serilog-sinks-file) that compresses log files using streaming GZip compression.
 
 ### Getting started
-
-`FileLifecycleHooks` is a new Serilog File Sink mechanism that allows hooking into log file lifecycle events, and allows scenarios such as wrapping the Serilog output stream in another stream.
-
 To get started, install the latest [Serilog.Sinks.File.GZip](https://www.nuget.org/packages/Serilog.Sinks.File.GZip) package from NuGet:
 
 ```powershell
@@ -53,3 +50,11 @@ It's also possible to enable GZIP compression when configuring Serilog from a co
 Larger buffer sizes potentially result in better compression ratios, but note that in the event of a crash that the contents of the buffer may be lost.
 
 As is [standard with Serilog](https://github.com/serilog/serilog/wiki/Lifecycle-of-Loggers#in-all-apps), it's important to call `Log.CloseAndFlush();` before your application ends.
+
+### About `FileLifecycleHooks`
+`FileLifecycleHooks` is a Serilog File Sink mechanism that allows hooking into log file lifecycle events, enabling scenarios such as wrapping the Serilog output stream in another stream, or capturing files before they are deleted by Serilog's retention mechanism.
+
+Other available hooks include:
+
+- [serilog-sinks-file-header](https://github.com/cocowalla/serilog-sinks-file-header): writes a header to the start of each log file
+- [serilog-sinks-file-archive](https://github.com/cocowalla/serilog-sinks-file-archive): archives completed log files before they are deleted by Serilog's retention mechanism

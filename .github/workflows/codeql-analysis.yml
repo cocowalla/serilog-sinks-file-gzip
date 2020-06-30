@@ -30,11 +30,15 @@ jobs:
       with:
         languages: csharp
 
-    - run: |
-        pwd
-        ls -al
-        chmod +x build.sh
-        ./build.sh
+    # Autobuild attempts to build any compiled languages (C/C++, C#, or Java).
+    
+    # If this step fails, then you should remove it and run the build manually (see below).
+    - name: Autobuild
+      uses: github/codeql-action/autobuild@v1    
+
+    #- run: |
+    #    chmod +x build.sh
+    #    ./build.sh
 
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@v1

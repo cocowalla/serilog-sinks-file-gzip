@@ -31,6 +31,8 @@ jobs:
         languages: csharp
 
     - run: |
+        pwd
+        ls -al
         chmod +x build.sh
         ./build.sh
 

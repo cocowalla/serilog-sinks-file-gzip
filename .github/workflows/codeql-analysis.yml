@@ -31,6 +31,7 @@ jobs:
         languages: csharp
 
     - run: |
+        chmod +x build.sh
         ./build.sh
 
     - name: Perform CodeQL Analysis

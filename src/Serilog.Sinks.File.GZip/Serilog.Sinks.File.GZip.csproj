@@ -2,11 +2,11 @@
 
     <PropertyGroup>
         <Description>Plugin for the Serilog File sink that compresses output using streaming GZIP.</Description>
-        <VersionPrefix>1.0.2</VersionPrefix>
+        <VersionPrefix>1.1.0</VersionPrefix>
         <GenerateAssemblyVersionAttribute>false</GenerateAssemblyVersionAttribute>
         <Authors>Colin Anderson</Authors>
         <Copyright>Copyright © Colin Anderson 2019</Copyright>
-        <TargetFrameworks>net45;netstandard1.6;netstandard2.0;netstandard2.1</TargetFrameworks>
+        <TargetFrameworks>net462;net471;netstandard2.0;net6.0;net8.0;net9.0</TargetFrameworks>
         <AssemblyName>Serilog.Sinks.File.GZip</AssemblyName>
         <RootNamespace>Serilog.Sinks.File.GZip</RootNamespace>
         <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
@@ -15,16 +15,12 @@
         <GenerateDocumentationFile>false</GenerateDocumentationFile>
     </PropertyGroup>
 
-    <PropertyGroup Condition=" '$(TargetFramework)' == 'netstandard1.6' ">
-        <!-- Don't reference the full NETStandard.Library -->
-        <DisableImplicitFrameworkReferences>true</DisableImplicitFrameworkReferences>
-    </PropertyGroup>
-
     <PropertyGroup>
         <IsPackable>true</IsPackable>
         <PackageTags>serilog;file;compression;gzip</PackageTags>
         <PackageProjectUrl>https://github.com/cocowalla/serilog-sinks-file-gzip</PackageProjectUrl>
         <PackageId>Serilog.Sinks.File.GZip</PackageId>
+        <PackageReadmeFile>README.md</PackageReadmeFile>
         <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
     </PropertyGroup>
 
@@ -32,15 +28,8 @@
         <PackageReference Include="Serilog.Sinks.File" Version="4.1.0" />
     </ItemGroup>
 
-    <ItemGroup Condition=" '$(TargetFramework)' == 'net45' ">
-        <Reference Include="System" />
-        <Reference Include="System.Core" />
-        <Reference Include="Microsoft.CSharp" />
-        <Reference Include="System.IO.Compression" />
-    </ItemGroup>
-
-    <ItemGroup Condition=" '$(TargetFramework)' == 'netstandard1.6' ">
-        <PackageReference Include="System.IO.Compression" Version="4.3.0" />
+    <ItemGroup>
+        <None Include="..\..\README.md" Pack="true" Visible="false" PackagePath="/" />
     </ItemGroup>
 
 </Project>
